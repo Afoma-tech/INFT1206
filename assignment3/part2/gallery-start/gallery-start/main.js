@@ -30,6 +30,31 @@ imageFilenames.forEach(filename => {
     });
 });
 
+// Add event listener for keyboard navigation
+document.addEventListener('keydown', function(event) {
+    const displayedImageSrc = displayedImage.getAttribute('src');
+    const currentIndex = imageFilenames.indexOf(displayedImageSrc.substring(displayedImageSrc.lastIndexOf('/') + 1));
+
+    // Handle left arrow key
+    if (event.key === 'ArrowLeft') {
+        const newIndex = (currentIndex - 1 + imageFilenames.length) % imageFilenames.length;
+        updateDisplayedImage(newIndex);
+    }
+
+    // Handle right arrow key
+    if (event.key === 'ArrowRight') {
+        const newIndex = (currentIndex + 1) % imageFilenames.length;
+        updateDisplayedImage(newIndex);
+    }
+});
+
+// Function to update the displayed image based on index
+function updateDisplayedImage(index) {
+    const filename = imageFilenames[index];
+    displayedImage.setAttribute('src', `images/${filename}`);
+    displayedImage.setAttribute('alt', altText[filename]);
+}
+
 
 /* Wiring up the Darken/Lighten button */
 btn.addEventListener('click', function() {
