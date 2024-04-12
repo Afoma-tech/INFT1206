@@ -159,6 +159,27 @@ while (balls.length < 25) {
 
 const evilCircle = new EvilCircle(50, 50); // Create an instance of EvilCircle
 
+// Add event listener for mouse movement to update EvilCircle's position
+canvas.addEventListener('mousemove', (e) => {
+  evilCircle.x = e.clientX;
+  evilCircle.y = e.clientY;
+});
+
+// Add event listener for mouse click to check collision between EvilCircle and balls
+canvas.addEventListener('click', () => {
+  for (const ball of balls) {
+    if (ball.exists) {
+      const dx = evilCircle.x - ball.x;
+      const dy = evilCircle.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < evilCircle.size + ball.size) {
+        ball.exists = false; // Remove the ball
+      }
+    }
+  }
+});
+
 // HTML paragraph element for displaying ball count
 const paragraph = document.createElement("p");
 paragraph.textContent = "Ball count: " + balls.length;
