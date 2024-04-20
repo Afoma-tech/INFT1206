@@ -1,5 +1,21 @@
 /* || General setup */
 
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GUn0LZJ8Nc.ttf) format('truetype');
+    font-display: swap; /* Addition to leverage font-display */
+}
+
+@font-face {
+    font-family: 'Sonsie One';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/sonsieone/v10/PbymFmP_EAnPqbKaoc18YVu80lbp8fUnPg.ttf) format('truetype');
+    font-display: swap; /* Addition to leverage font-display */
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -65,7 +81,7 @@ html, body {
   
   nav {
     height: 50px;
-    background-color: ff80ff;
+    
     display: flex;
     padding: 1% 0;
     margin-bottom: 10px;
