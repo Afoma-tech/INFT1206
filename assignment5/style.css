@@ -51,8 +51,8 @@ html, body {
   
   /* || header layout */
   
-  header, article, footer, .secondary {
-    background-color: green;
+  nav, article, footer, .secondary {
+    background-color: white;
   }
   
   article, footer, .secondary {
