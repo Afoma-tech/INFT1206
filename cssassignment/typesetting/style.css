@@ -43,3 +43,21 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+
+  /* Import fonts */
+@font-face {
+    font-family: 'PTSerif';
+    src: url('path/to/PTSerif-Regular.woff2') format('woff2'),
+         url('path/to/PTSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'PTSerif';
+    src: url('path/to/PTSerif-Bold.woff2') format('woff2'),
+         url('path/to/PTSerif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
