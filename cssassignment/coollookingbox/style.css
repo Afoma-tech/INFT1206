@@ -1,0 +1,25 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  /* Your CSS below here */
+
+div{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.0620rem;
+    background-color: hotpink;
+    color: blueviolet;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border: 1px solid rgb(137, 6, 137);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 100%); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 
+    inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.5); ;
+}
+  
